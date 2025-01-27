@@ -1,0 +1,542 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+:root {
+  --color-primary: #6f6af8;
+  --color-white: #fff;
+  --color-red: rgb(255, 63, 63);
+  --color-gray-100: hsl(220, 20%, 10%, 5%);
+  --color-gray-100: hsl(220, 20%, 10%);
+  --color-gray-100: hsl(220, 20%, 10%, 25%);
+  --color-gray-100: hsl(220, 20%, 10%, 50%);
+  --color-gray-700: #252542;
+  --color-gray-900: #0c0c22;
+  --color-bg: hwb(240 95% 0%);
+  --trainsition: all 300ms ease;
+  --radius-1: 0.3rem;
+  --radius-2: 0.6rem;
+  --radius-3: 1rem;
+  --radius-4: 2rem;
+}
+* {
+  font-family: "Poppins", serif;
+}
+h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+p {
+  font-size: 0.85rem;
+}
+body {
+  background-color: hwb(240 95% 0%);
+}
+nav {
+  background: var(255, 255, 255, 0.5);
+  border-bottom: 4px solid hwb(240 95% 0%);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+.footer {
+  background-color: var(--color-gray-900);
+  margin-top: 6rem;
+  padding-top: 6rem;
+}
+.footer_c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+.footer_c a {
+  background: var(--color-gray-700);
+  color: var(--color-white);
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-2);
+  display:block;
+  width: 162px;
+  text-align: center;
+}
+.footer_c a:hover {
+  transition: var(--transition);
+  background: var(--color-bg);
+  color: var(--color-gray-900);
+}
+.copyright {
+  color: var(--color-white);
+  border-top: 2px solid var(--color-gray-700);
+  padding: 1rem;
+}
+.btn {
+  padding: 1rem;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-4);
+  color: var(--color-white);
+}
+.btn_post {
+  padding: 10px;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-4);
+  color: var(--color-primary);
+}
+.btn_post:hover {
+  background-color: var(--color-gray-900);
+  border-radius: var(--radius-4);
+  color: var(--color-white);
+}
+.btn_edit {
+  width: 4rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-2);
+  color: var(--color-white);
+}
+.btn-update-details {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-2);
+  color: var(--color-white);
+}
+.btn_delete {
+  width: 4rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  background-color: var(--color-red);
+  border-radius: var(--radius-2);
+  color: var(--color-white);
+}
+.posts {
+  margin-top: 84px;
+}
+.post_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  margin-bottom: 20px;
+}
+.aposts {
+  height: 534px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-art {
+  background-color: var(--color-white);
+  border-radius: var(--radius-4);
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.box-art:hover {
+  box-shadow: 0 1.5rem 2rem rgb(0, 0, 0, 0.1);
+}
+.text_contain {
+  height: 191px;
+  width: 345px;
+}
+.pi {
+  height: 238px;
+  width: 345px;
+  overflow: hidden;
+}
+.pi img {
+  border-radius: var(--radius-3);
+  object-fit: cover; /* Adjusts the image to cover the container fully */
+  width: 100%; /* Ensures the image spans the container width */
+  height: 100%;
+}
+.register {
+  height: 83vh;
+}
+.input {
+  width: 40vw;
+  gap: 15px;
+  margin-top: 30px;
+}
+.input input {
+  padding: 5px 10px;
+  border-radius: var(--radius-2);
+  border: 2px solid var(--color-white);
+  outline: none;
+}
+.input select {
+  padding: 5px 10px;
+  background-color: rgba(128, 128, 128, 0.203);
+  border-radius: var(--radius-2);
+  outline: none;
+}
+.register-btn {
+  font-size: large;
+  color: var(--color-white);
+  width: 6rem;
+  padding: 0.5rem;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-2);
+}
+.register-btn:hover {
+  font-size: large;
+  color: var(--color-white);
+  width: 6rem;
+  padding: 0.5rem;
+  background-color: var(--color-gray-900);
+  border-radius: var(--radius-2);
+}
+.error-register {
+  padding: 5px;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border-radius: var(--radius-1);
+}
+.input input:focus {
+  border: 2px solid var(--color-primary);
+}
+.author-avatar {
+  width: 50px;
+  border-radius: var(--radius-3);
+}
+.center-no-post {
+  height: 58vh;
+}
+
+/* singleposts */
+.single-post-container {
+  margin-top: 84px;
+  width: 50vw;
+  padding: 5vh 5vw;
+
+  background-color: var(--color-white);
+}
+.single-post-container p {
+  text-align: justify;
+}
+
+/* Authors */
+.authors {
+  padding: 5vh 10vw;
+}
+.authors-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.author {
+  padding: 15px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-3);
+}
+.author:hover {
+  box-shadow: 0 1.5rem 2rem rgb(0, 0, 0, 0.1);
+}
+.author-img {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.author-img img {
+  object-fit: contain;
+}
+.author-title {
+  font-size: medium;
+  font-weight: bold;
+}
+.author-post {
+  font-size: small;
+}
+/* UserPrfile */
+.profile-container {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-profile {
+  background-color: var(--color-white);
+  color: var(--color-gray-700);
+  padding: 5px 15px;
+  border-radius: var(--radius-2);
+  font-size: small;
+}
+.btn-profile:hover {
+  background-color: var(--color-gray-900);
+  color: var(--color-white);
+}
+
+.profile-photo-border {
+  background-color: var(--color-white);
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+}
+.profile-photo-border img {
+  border-radius: 100%;
+  justify-content: center;
+  align-content: center;
+}
+.profile-photo-wrapper {
+  position: relative;
+}
+.profile-form input[type="file"] {
+  visibility: hidden;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 9rem;
+  right: 1rem;
+}
+.profile-form {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 9rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.profile-form label {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-gray-900);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.profile-check {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 9rem;
+  right: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.profile-form-fill {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+/* Dashboard */
+.dashboard-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.dashboard-container {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dashboard-unit {
+  border-radius: var(--radius-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 10px 10px;
+}
+.dashboard-photo-border {
+  height: 55px;
+  width: 80px;
+  overflow: hidden;
+  border-radius: var(--radius-2);
+}
+.dashboard-photo-border img {
+  object-fit: contain;
+}
+.edit-delete-container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.btn-view {
+  width: 4rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border-radius: var(--radius-2);
+}
+.btn-view:hover {
+  background-color: var(--color-gray-700);
+  color: var(--color-white);
+}
+/* Create Post */
+.create-post{
+  display: flex;
+  justify-content: center;
+}
+.create-post-container{
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.ql-editor{
+  overflow: scroll;
+  background-color: var(--color-white);
+  height: 10rem !important;
+}
+
+/* media queries */
+@media screen and (max-width: 1200px) {
+  h1{
+    font-size: 1.2rem;
+  }
+  h2{
+    font-size: 1.0rem;
+  }
+  p{
+    font-size:0.8rem;
+  }
+  /* .nav-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+  } */
+  .nav-menu{
+    position: absolute;
+    top: 4rem;
+    right: -4rem;
+    flex-direction: column;
+    background-color: var(--color-bg);
+    padding: 20px;
+    width: 150px;
+    border-radius: var(--radius-3);
+    box-shadow: 0 1.5rem 2rem rgb(0, 0, 0, 0.1);
+    
+  }
+  .nav-menu li{
+    animation: dropDown 500ms ease forwards;
+    opacity: 0;
+    transform: rotateX(90deg);
+    transform-origin: top;
+
+  }
+  @keyframes dropDown {
+    to{
+      opacity: 1;
+      transform: rotateX(0);
+    }
+  }
+  .nav-menu-container{
+    position: relative;
+  }
+  .nav{
+   justify-content: space-between;
+   padding: 0px 3.5rem;
+  }
+  .profile-form-fill{
+    width: 50vw;
+  }
+  .single-post-container{
+    width: 70vw;
+  }
+  .input{
+    width: 60vw;
+  }
+  .authors-container{
+    grid-template-columns: repeat(3,1fr);
+  }
+  
+}
+@media screen and (max-width: 1500px) {
+  .post_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    width: 80vw;
+  }
+  .footer_c{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+  .footer_c li{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .input{
+    width: 60vw;
+  }
+  
+}
+@media screen and (max-width:1000px){
+  .post_container{
+    grid-template-columns: repeat(1,1fr);
+    width: 100vw;
+    gap: 2rem 0rem;
+  }
+  .profile-container{
+    width: 80vw;
+  }
+  .profile-form-fill{
+    width: 80vw;
+  }
+  .input{
+    width: 80vw;
+  }
+  .authors-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .dashboard-container{
+    width: 90vw;
+  }
+}
+@media screen and (max-width:800px){
+  .footer_c{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .single-post-container{
+    width: 90vw;
+  }
+  .single-post-profile{
+    flex-direction: column;
+    align-items: flex-start;
+  } 
+  .single-post-btn{
+    margin-left: 20px;
+  } 
+  .input{
+    width: 90vw;
+  }
+  .quil-mod{
+    margin-bottom: 5rem;
+  }
+  .authors-container{
+    grid-template-columns: repeat(1,1fr);
+  }
+  h4{
+    font-size: 0.6rem;
+    font-weight: bold;
+  }
+}
