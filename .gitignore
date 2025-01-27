@@ -4,4 +4,4 @@ client/.env
 server/.env
 server/uploads/
 client/src/images/
-.vscode
+.vscode/
