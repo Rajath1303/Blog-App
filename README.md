@@ -23,7 +23,7 @@ A full-stack blog application built using the MERN (MongoDB, Express.js, React, 
 
 Clone the repository.
    ```bash
-   git clone https://github.com/](https://github.com/Rajath1303/Blog-App.git
+   git clone https://github.com/Rajath1303/Blog-App.git
   ```
 ### Backend Setup
 1. Navigate to server
